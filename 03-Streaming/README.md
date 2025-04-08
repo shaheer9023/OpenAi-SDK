@@ -1,6 +1,5 @@
 [Google Colab Link](https://colab.research.google.com/drive/1MPuMX_BP1M8mHL5KVaOS-JRrozR2MDR1?usp=sharing)
 
-
 # Explanation
 
 ---
@@ -12,7 +11,7 @@ load_dotenv(find_dotenv())
 gemini_api_key = os.getenv("gemini_api_key")
 ```
 
-🧠 **Explanation (Roman Urdu):**
+🧠 **Explanation:**
 
 * `load_dotenv()` `.env` file load karta hai — jisme sensitive cheezein hoti hain (like API key).
 * `find_dotenv()` automatically `.env` file ko locate karta hai.
@@ -131,7 +130,7 @@ Yeh function tab chalta hai jab user koi bhi sawal ya message bhejta hai.
 history = cl.user_session.get("history")
 ```
 
-📘 **Roman Urdu:**
+📘 **Explanation:**
 
 * Pehle se jo bhi messages hue they (user aur AI ke) — wo yahan `history` variable mein nikal rahe hain.
 * **Yeh important hai context ke liye** , taake AI samajh sake ke pehle kya baat ho chuki hai.
@@ -145,7 +144,7 @@ msg = cl.Message(content="")
 await msg.send()
 ```
 
-📘 **Roman Urdu:**
+📘 **Explanation:**
 
 * Ek khaali message bubble bana diya gaya screen pe — yeh later fill hoga jab AI jawab dega.
 * Isse **typing effect** create hota hai jaise AI soch raha ho.
@@ -158,7 +157,7 @@ await msg.send()
 history.append({"role": "user", "content": message.content})
 ```
 
-📘 **Roman Urdu:**
+📘 **Explanation:**
 
 * User ne jo likha wo ek dictionary form mein store ho gaya history mein:
   ```json
@@ -177,7 +176,7 @@ result = Runner.run_streamed(
 )
 ```
 
-📘 **Roman Urdu:**
+📘 **Explanation:**
 
 * Ab AI ko `Runner.run_streamed()` ke zariye pura message + pehle ki history bhej rahe hain.
 * `agent1` = AI ki personality (helpful bot)
@@ -195,7 +194,7 @@ async for event in result.stream_events():
         await msg.stream_token(event.data.delta)
 ```
 
-📘 **Roman Urdu:**
+📘 **Explanation:**
 
 * AI ka response ek sath nahi aata — **ek ek lafz ya sentence** stream hota hai.
 * `stream_token()` har word ko screen pe live display karta hai.
@@ -210,7 +209,7 @@ history.append({"role": "assistant", "content": result.final_output})
 cl.user_session.set("history", history)
 ```
 
-📘 **Roman Urdu:**
+📘 **Explanation:**
 
 * Jab pura AI ka response mil gaya to usko bhi history mein store kar liya:
   ```json
