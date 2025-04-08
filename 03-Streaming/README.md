@@ -1,4 +1,6 @@
-## **Doremon Chatbot Explanation**
+[Google Colab Link](https://colab.research.google.com/drive/1MPuMX_BP1M8mHL5KVaOS-JRrozR2MDR1?usp=sharing)
+
+Doremon Chatbot Explanation
 
 Socho aap ne ek chatbot banaya jo har user ke sawal ka jawab deta hai — jaise:
 
@@ -9,7 +11,6 @@ Socho aap ne ek chatbot banaya jo har user ke sawal ka jawab deta hai — jaise:
 Yeh **AI chatbot** Gemini API ka use kar raha hai jo Google ka powerful language model hai — and **Chainlit** uska front-end chat interface banata hai (WhatsApp jaisa).
 
 ---
-
 
 ### ✅ **1. Load Environment and API Key**
 
